@@ -1,0 +1,22 @@
+id: 20240417-text-to-zettel-pipeline
+title: Text-to-Zettel Pipeline
+text: >
+  A layered framework transforms unstructured text into structured knowledge.
+  The process moves through semantic condensation into a `.yaml` abstraction,
+  which is then split into atomic Zettels.
+  LLMs serve as the distillation engine at each stage — first extracting structure,
+  then refactoring into minimal, interconnected ideas.
+tags: [zettel-pipeline, llm, distillation, yaml]
+anchor: "unstructured text → YAML → Zettels"
+source: self-generated
+resonates_with: [20240417-first-principles-system]
+connects_to: []
+contradicts: []
+expands: []
+notes: >
+  This is the fundamental parsing loop of Zeno.
+  It's recursive, LLM-powered, and mimics human condensation + synthesis.
+  YAML acts as a mid-state — a semantic sketch or interface.
+  Useful for transforming books, blogs, conversations, research notes.
+llm_generated: false
+created: 2024-04-17T00:00:00Z

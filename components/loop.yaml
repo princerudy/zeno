@@ -1,0 +1,12 @@
+name: Core Thought Loop
+interval: manual 
+steps:
+  - select_seed_node: random or query
+  - find_context_nodes: embeddings + links
+  - reflect_and_generate: use LLM on seed + context
+  - output_artefact: save in artefacts/
+  - optionally_expand_graph: true
+idea:
+  - every step is a frame / state of the loop
+  - the loop is a cycle of reflection and generation
+  - we can freeze and commit the loop state

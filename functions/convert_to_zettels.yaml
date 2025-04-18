@@ -1,0 +1,58 @@
+function: convert_to_zettels
+description: >
+  Takes unstructured or semi-structured text and returns a list of atomic Zettels,
+  each representing a single self-contained idea. The Zettels should be minimal,
+  precise, and connectable to others. The function simulates thoughtful distillation.
+
+inputs:
+  - text: >
+      The raw input to be processed. Can be notes, essays, transcripts, or research.
+
+output_format:
+  - id: string  # optional, auto-generated if not present
+  - title: string  # short, idea-distilling name
+  - text: string  # full explanation of the idea
+  - tags: [string]  # 3-5 keywords
+  - anchor: string  # optional: key phrase, quote, or theme
+  - connects_to: [string]  # related concepts, if known
+  - contradicts: [string]
+  - expands: [string]
+  - source: string  # where this idea came from
+  - notes: string  # optional reflections, LLM or user thoughts
+  - created: timestamp
+
+rules:
+  - Each Zettel must express one idea only.
+  - Avoid repetition across Zettels.
+  - Prefer depth over breadth — even partial thoughts are valid.
+  - If the input text contains unclear ideas, still try to extract them as Zettels with incomplete tags.
+  - Prefer present tense, declarative voice.
+  - Use plain language unless the concept requires technical phrasing.
+
+example_input: |
+  The system should process text like a thinking mind. 
+  Instead of extracting only keywords, it should produce reflections. 
+  Ideas must become nodes, not summaries.
+
+example_output:
+  - id: auto
+    title: System as Thinking Mind
+    text: >
+      A system should process information as a thinking mind would: not by extracting only keywords,
+      but by producing reflective conceptual units. It must generate new understanding, not just summaries.
+    tags: [system, reflection, knowledge]
+    anchor: "process like a thinking mind"
+    connects_to: []
+    source: "example_input"
+    created: 2024-04-17T00:00:00Z
+
+  - id: auto
+    title: Ideas as Nodes
+    text: >
+      Ideas should be represented as atomic, connectable nodes in a knowledge graph,
+      not as bulk paragraphs or flat summaries.
+    tags: [ideas, node-structure, zettels]
+    anchor: "ideas become nodes"
+    connects_to: []
+    source: "example_input"
+    created: 2024-04-17T00:00:00Z

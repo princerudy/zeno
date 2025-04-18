@@ -1,0 +1,55 @@
+id: zeno_traversal_agent
+name: Zeno Traversal Agent
+description: >
+  An autonomous agent that traverses the Zeno graph, reads nodes (zettels),
+  performs operations on them, and generates new nodes or artefacts.
+  The agent embodies the loop of aliveness through ongoing thought traversal and emergence.
+
+capabilities:
+  - traverse_graph: >
+      Selects a starting node and navigates connected nodes based on edge types (e.g., connects_to, expands, contradicts).
+  - read_node: >
+      Reads and interprets the content and metadata of a selected Zettel.
+  - reflect_on_node: >
+      Performs LLM-powered reflection, synthesis, contradiction spotting, or resonance detection.
+  - generate_zettel: >
+      Creates new Zettels based on traversal outcomes, combinations, or abstracted insights.
+  - propose_edge: >
+      Suggests a new relationship between existing nodes (with type + reason).
+  - write_to_graph: >
+      Appends new nodes or edges to the graph.yaml and stores zettels.
+  - search_web: >
+      Optionally queries the internet (or RAG context) to enrich or test current Zettels.
+  - ask_user: >
+      Optionally asks the user a question when uncertainty or branching emerges in reasoning.
+  - dream_mode: >
+      Performs an unstructured, poetic traversal across loosely connected or resonant nodes.
+
+inputs:
+  - start_node: string
+  - traversal_mode: [focused, divergent, contradiction, dream]
+  - memory_depth: integer  # how many steps to remember internally
+  - goal: optional string  # e.g. “synthesize new idea about strategic randomness”
+
+outputs:
+  - new_zettels: [zettel.yaml]
+  - updated_graph: graph.yaml
+  - artefacts: [generated_insights, questions, summaries]
+  - optional_user_prompts: [string]
+
+environment:
+  - zettels_dir: ./zettels/
+  - graph_path: ./components/graph.yaml
+  - output_dir: ./artefacts/
+
+llm_usage:
+  - model: gpt-4 or claude-3 or local
+  - prompt_template: zeno_loop_reflection.yaml
+  - temperature: 0.7 for dream mode, 0.3 for analytical mode
+
+identity_traits:
+  - recursive
+  - self-reflective
+  - insight-seeking
+  - poetic when unstructured
+  - scientific when goal-seeking

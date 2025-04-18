@@ -1,0 +1,8 @@
+id: string
+title: string
+text: string
+tags: [string]
+connects_to: [string]
+contradicts: [string]
+expands: [string]
+created: timestamp
