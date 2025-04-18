@@ -1,0 +1,134 @@
+- id: auto
+  title: Applying Refactoring Principles to Knowledge
+  text: >
+    The techniques used for refactoring code, such as simplifying complex systems and improving structure, can be applied to manage and refine knowledge. Just as messy codebases can be improved, unstructured knowledge can be organized and clarified through a similar process.
+  tags: [refactoring, knowledge management, analogy, simplification, organization]
+  anchor: "Why not refactoring knowledge?"
+  connects_to: [Automated Knowledge Refactoring System, Manifest Definition]
+  contradicts: []
+  expands: []
+  source: "User input"
+  notes: "This draws an analogy between the user's programming background and the proposed knowledge system."
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Automated Knowledge Refactoring System Goal
+  text: >
+    The objective is to develop a system that automatically processes and refactors a collection of documents (knowledge base). This system would organize the underlying content and generate structured representations, such as YAML manifests.
+  tags: [automation, knowledge system, refactoring, organization, system design]
+  anchor: "system that automatically refactores underlying files. Organises them. Writes .yaml manifests."
+  connects_to: [Applying Refactoring Principles to Knowledge, Knowledge Refactoring Process Steps]
+  contradicts: []
+  expands: []
+  source: "User input"
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Manifest as Atomic Unit of Knowledge
+  text: >
+    A 'manifest' serves as the fundamental, atomic structure for knowledge within the proposed system. Each manifest is designed to encapsulate a single, distinct idea extracted from the source content.
+  tags: [manifest, atomicity, knowledge representation, idea, structure]
+  anchor: "Manifest is an atom structure of knowledge. It encapsulates one Idea."
+  connects_to: [Automated Knowledge Refactoring System Goal, Difficulty of Defining an Idea, Manifest Extraction from Content]
+  contradicts: []
+  expands: []
+  source: "User input"
+  notes: "This defines the core data structure of the proposed system."
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Difficulty of Defining an Idea
+  text: >
+    Precisely defining what constitutes a single 'idea' for encapsulation within a manifest is challenging and potentially subjective. Identifying the boundaries of an atomic concept requires careful consideration and may be considered an art.
+  tags: [idea, definition, challenge, atomicity, knowledge representation, subjectivity]
+  anchor: "Still - figuring out what an idea is is an art."
+  connects_to: [Manifest as Atomic Unit of Knowledge]
+  contradicts: []
+  expands: []
+  source: "User input"
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Knowledge Refactoring Process Overview
+  text: >
+    A proposed workflow for knowledge refactoring involves several stages: 1. Starting with seed documents. 2. Converting content into atomic manifests. 3. Storing manifests separately from source data. 4. Combining manifests to build larger documents. 5. Using existing structures to generate/extend knowledge. 6. Repeating the process iteratively. 7. Periodically creating summary artifacts.
+  tags: [process, workflow, knowledge management, refactoring, iteration, system design]
+  anchor: "What we can do is: 1. take the seed... 7. Ocassionaly we create artifact."
+  connects_to: [Automated Knowledge Refactoring System Goal, Manifest as Atomic Unit of Knowledge, Separate Storage for Manifests, Iterative Knowledge Refinement, Artifact Generation]
+  contradicts: []
+  expands: []
+  source: "User input"
+  notes: "Summarizes the multi-step process outlined by the user."
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Separate Storage for Manifests and Source Data
+  text: >
+    Manifests, representing atomic ideas, should be stored in a separate location (e.g., folder, filesystem) from the original source documents. The source documents remain untouched, serving as the immutable source of truth.
+  tags: [data management, storage, source of truth, manifest, immutability, system architecture]
+  anchor: "Have the manifests as separate filesystem / folder - we don't touch the raw data. it's a source of truth"
+  connects_to: [Knowledge Refactoring Process Overview, Manifest as Atomic Unit of Knowledge]
+  contradicts: []
+  expands: []
+  source: "User input"
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Combining and Managing Manifests
+  text: >
+    Once created, individual manifests can be combined, managed, and organized to construct larger, more complex documents or knowledge structures. This allows for flexible synthesis of ideas.
+  tags: [manifest, combination, synthesis, knowledge construction, organization]
+  anchor: "Then we could combine manifests and manage manifests into documents"
+  connects_to: [Knowledge Refactoring Process Overview, Manifest as Atomic Unit of Knowledge]
+  contradicts: []
+  expands: []
+  source: "User input"
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Knowledge Extension via Manifests
+  text: >
+    Existing manifests and the documents constructed from them can serve as a basis for generating new insights or extending the knowledge base, potentially by linking to or creating further manifests.
+  tags: [knowledge generation, extension, linking, inference, manifest]
+  anchor: "basing on documents we can generate, extend the knowledge by other manifests."
+  connects_to: [Knowledge Refactoring Process Overview, Combining and Managing Manifests]
+  contradicts: []
+  expands: []
+  source: "User input"
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Iterative Knowledge Refinement Loop
+  text: >
+    The process of extracting, combining, and extending knowledge through manifests is designed to be cyclical and potentially indefinite. Knowledge is continuously refined and reorganized through repeated iterations.
+  tags: [iteration, refinement, continuous improvement, knowledge management, process loop]
+  anchor: "Re-loop. Indefinetely."
+  connects_to: [Knowledge Refactoring Process Overview, Applying Refactoring Principles to Knowledge]
+  contradicts: []
+  expands: []
+  source: "User input"
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Artifact Generation
+  text: >
+    Periodically, the system can produce tangible artifacts, such as summary documents. These artifacts encapsulate the progress made or represent a snapshot of the structured knowledge at a specific point in time.
+  tags: [artifact, output, reporting, knowledge synthesis, documentation]
+  anchor: "Ocassionaly we create artifact. A document which encapsulates the progress or smth like that."
+  connects_to: [Knowledge Refactoring Process Overview]
+  contradicts: []
+  expands: []
+  source: "User input"
+  created: 2025-04-18T02:56:45Z
+
+- id: auto
+  title: Manifest Extraction from Content as Core Method
+  text: >
+    The fundamental approach proposed for building the structured knowledge base is the extraction of atomic manifests directly from the raw source content. This conversion process is central to the system.
+  tags: [manifest, extraction, content processing, knowledge capture, core method]
+  anchor: "Extracting manifests from content."
+  connects_to: [Manifest as Atomic Unit of Knowledge, Knowledge Refactoring Process Overview]
+  contradicts: []
+  expands: []
+  source: "User input"
+  created: 2025-04-18T02:56:45Z
