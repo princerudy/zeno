@@ -1,0 +1,54 @@
+thought_simulation_model:
+  core_analogy:
+    process_name: "That Reminds Me Of"
+    mechanism: automatic_graph_traversal
+    graph_elements:
+      nodes: associated_ideas # memes
+      edges: association_links # strengthened/weakened by traversal
+  modeling_approach:
+    embeddings:
+      role: capture_associations
+      challenge: model_variance # different models yield different associations
+    markov_chains:
+      application: model_thought_sequences # meme -> meme
+      prediction: next_thought_probability
+      simulation: mind_cycles
+      cycle_unit: one_meme
+  key_research_questions:
+    - identify_seed_memes: core_set_of_user_concepts
+    - model_preference: probability_user_likes_meme
+    - predict_transition: most_probable_next_meme # user's internal model
+  formalized_system:
+    - section: 1_Thought_as_Graph_Traversal
+      description: thinking_is_association_based_traversal
+      components:
+        nodes: memes # compressed ideas
+        edges: associations # weighted (semantic + emotional)
+        traversal_drivers: attention, taste
+    - section: 2_Embedding_Space_as_Thought_Graph
+      description: embedding_model_defines_associative_geometry
+      components:
+        model: fixed_associative_map
+        user: unique_vector_walker # position within the map
+        taste_classifier: energy_function # pulls/repels user vector
+    - section: 3_Markovian_Mind_Cycles
+      description: modeling_thought_flow_as_state_transitions
+      components:
+        flow: meme_sequence # meme -> meme -> meme
+        cycle: coherent_loop # single idea package
+        model: markov_chain_of_meme_transitions
+        predictions_from_history:
+          - next_meme
+          - stable_cycles # recurring patterns
+          - surprising_jumps # novelty triggers
+    - section: 4_Mind_Simulation_Framework
+      description: components_for_simulating_thought
+      components:
+        seed_of_mind: user_meme_inventory
+        taste_model: preference_function # applied to embeddings
+        transition_model: meme_to_meme_markov_probability
+        simulation_process: generate_cycles_then_prune_with_taste
+  ultimate_question: Can_mind_be_simulated_by_modeling_meme_transitions_and_taste_gradients?
+  conceptual_metaphor:
+    system_type: self_propagating_meme_engine
+    processor_analogy: user_taste_functions_as_cpu

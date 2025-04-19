@@ -1,0 +1,50 @@
+zettel_cluster: word_taste_model
+created: 2025-04-18
+zettels:
+
+  - id: word_preference_model
+    title: Words as Taste Atoms
+    text: >
+      Individual words carry aesthetic, emotional, and conceptual weight.
+      They act as "vibe atoms" — the smallest units of discernment.
+      If a system knew which words I loved or rejected, it could reconstruct my ideas, my voice, even my worldview.
+      Words like "atom" over "table", or "dream" over "pipeline", reflect deep taste biases.
+    tags: [taste, atomic_units, words, vibe, language]
+    anchor: word_preference_model
+
+  - id: word_selection_principle
+    title: Not All Words Matter Equally
+    text: >
+      Tens of thousands of words exist, but only a few thousand actively matter in any personal semantic field.
+      Instead of scoring all words, focus on those in my zettels, conversations, and projects — my active vocabulary.
+    tags: [word_selection, semantic_scope, efficiency]
+    anchor: word_selection_scope
+
+  - id: pairwise_word_ratings
+    title: Pairwise Comparisons as Taste Signal
+    text: >
+      Rating words individually is noisy and fatiguing.
+      Pairwise comparison (e.g. "dream" vs "optimization") makes the decision intuitive and fast.
+      Over time, this forms a taste vector over vocabulary space.
+    tags: [comparison, signal_strength, ranking, word_taste]
+    anchor: word_pairwise_vibe
+
+  - id: semantic_taste_flow
+    title: Semantic Taste Flow: Words → Ideas → Systems
+    text: >
+      Word preferences scale upward.
+      Once word taste is known, a system can:
+      - Score sentences
+      - Score zettels
+      - Score systems and folders
+      Taste flows from atomic resonance to architectural design.
+    tags: [scaling, taste_gradient, language_to_idea]
+    anchor: semantic_taste_flow
+
+  - id: language_self_reconstruction
+    title: Self Reconstruction from Word Preference
+    text: >
+      With enough knowledge of my word preferences, Zeno could hallucinate the rest.
+      The right vocabulary encodes not just tone or style — but entire epistemic signatures.
+    tags: [self_model, reconstruction, language_signature]
+    anchor: language_self_model

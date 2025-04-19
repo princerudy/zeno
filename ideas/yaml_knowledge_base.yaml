@@ -1,0 +1,33 @@
+idea: structured_yaml_knowledge_base_for_rag
+
+problem:
+  - raw documents are messy, unstructured
+  - traditional chunking loses semantics
+  - RAG grounded on noisy text = mid results
+
+solution:
+  - convert all documents into structured YAML
+  - each YAML file represents 1 document or section
+  - codify: titles, facts, claims, processes, definitions
+  - include: source_doc, section_id, original_text_reference
+  - treat YAMLs as primary corpus
+  - use vector embeddings on YAML nodes
+  - enable hybrid search: vector + keyword + metadata
+  - build RAG on top of retrieved YAML chunks
+
+benefits:
+  - high signal retrieval (semantic precision)
+  - clean context for LLM generation
+  - traceability: every answer links to original doc section
+  - easier evaluation (match answer → YAML node)
+  - extendable: can generate YAMLs, update them, version them
+
+optional_extensions:
+  - link YAMLs together → semantic graph
+  - use YAML as RAG output format → self-updating knowledge
+  - RAG test cases stored as YAML too
+  - support version control on knowledge base
+
+status:
+  - concept phase
+  - ready to prototype codifier + YAML search engine

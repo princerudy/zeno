@@ -1,0 +1,86 @@
+mind_mapping_system:
+  stated_activity:
+    type: playing_games
+    examples:
+      - "Top 10 Things You Like"
+      - "Would You Rather"
+      - "What That Reminds You Of?"
+      - "What Do You Think About?"
+  underlying_process:
+    action: mapping_and_distilling_mind
+    output_form: tree_chains_memes # graph_of_thoughts
+    method: traversing_thought_graph
+    # humorous_goal: find_reason_to_block_user
+  scope:
+    current: mind # ideas, thoughts, connections
+    future: brain # weights, biological substrate
+  potential_applications:
+    - simulate_thought_process
+    - simulate_ideas
+    - simulate_actions
+    - predict_preferences # "What meme will they like"
+  cautionary_note:
+    scenario: simulating_conversation_with_ex
+    advice: strongly_discouraged # "worst idea"
+  game_deck_v1:
+    - card:
+        id: 1
+        title: This or That
+        prompt: Choose between two options.
+        goal: Map preferences, build taste vector.
+        example: "Cats or Dogs?"
+        variant: Elo ranking system over time.
+    - card:
+        id: 2
+        title: What That Reminds You Of?
+        prompt: State association for previous word/meme.
+        goal: Build association graph.
+        example: "Embeddings? → Dreams."
+    - card:
+        id: 3
+        title: Send Me a Meme That Feels Like You Today
+        prompt: Share meme reflecting current inner state.
+        goal: Emotional self-representation.
+        bonus: Daily log for emotional embedding timeline.
+    - card:
+        id: 4
+        title: Rank These
+        prompt: Sort list from most to least 'you'.
+        goal: Reveal core values.
+        example: "[Freedom, Stability, Novelty, Truth, Power]"
+    - card:
+        id: 5
+        title: Odd One Out
+        prompt: Identify item that doesn't belong.
+        goal: Discover personal category boundaries.
+        example: "[GPT-4, Dreams, Randomness, Precision]"
+    - card:
+        id: 6
+        title: Cross-Translate
+        prompt: Convert idea into different sensory/symbolic form (color, sound, etc.).
+        goal: Surface internal symbol system.
+        example: "What color is 'longing'?"
+    - card:
+        id: 7
+        title: Meme Chain
+        prompt: Connect two memes in N steps (e.g., 3).
+        goal: Reveal mental pathing, associative leaps.
+        example: "Stoicism → Mushroom → Jazz"
+    - card:
+        id: 8
+        title: Reverse Meme
+        prompt: Express reaction/vibe; others guess original meme/concept.
+        goal: Test resonance, compression, shared understanding.
+        example: "Feeling: 'ugh' → Guess: 'existence is pain frog'"
+    - card:
+        id: 9
+        title: Pick One to Destroy Forever
+        prompt: Choose one cherished idea/value to eliminate from a set.
+        goal: Rapid value clarification via forced choice.
+        example: "[Creativity, Love, Truth, Mystery]"
+    - card:
+        id: 10
+        title: Mind Curling
+        prompt: Fuse two unrelated concepts into a new one.
+        goal: Test creativity, conceptual blending, lateral thinking.
+        example: "Blockchain + Tarot = ???"

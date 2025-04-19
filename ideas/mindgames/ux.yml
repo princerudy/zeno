@@ -1,0 +1,41 @@
+design_principles:
+  user_interaction:
+    minimize_cognitive_load: true
+    preferred_input: clicking # vs writing (high load)
+    inspiration: Tinder, mobile games (low effort)
+    method: present options, user selects # avoid free text
+  system_adaptation:
+    dynamic: true
+    mechanism: learns from user interactions
+    goal: game reflects user's mental model
+    outcome: builds latent representation of user's mind
+  feedback_loop:
+    criticality: highest importance
+    types:
+      - visual
+      - haptic (mobile)
+      - psychological (value delivery)
+    attributes:
+      - pleasant
+      - interesting
+      - immersive
+      - flow-inducing
+    manifestation: system visibly attunes to user psychology/preferences
+  user_value:
+    necessity: provide value, even if basic
+    examples: simple psychological games (e.g., personality quizzes)
+    research: understand appeal of simple quiz formats
+  platform_strategy:
+    focus: mobile-first
+    consideration: dedicated app (iOS)
+    rationale:
+      - superior UX vs mobile browsers
+      - enables haptic feedback
+    aesthetics: high importance (beautiful design)
+  engagement_mechanics:
+    model: simple, addictive games (e.g., Candy Crush Saga)
+    elements:
+      - clicking
+      - swiping
+      - popping visuals
+    goal: inherently pleasant interaction via feedback

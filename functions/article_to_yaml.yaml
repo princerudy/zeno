@@ -1,0 +1,40 @@
+prompt_protocol: convert_article_to_condensed_yaml
+
+input_spec:
+  type: article_text
+  location: placeholder_below
+
+steps:
+
+  - analyze_structure:
+      extract_elements: [sections, arguments, themes]
+      source: input_spec
+
+  - design_yaml_hierarchy:
+      section_keys: concise_descriptive
+      logical_nesting: true
+
+  - condense_content:
+      focus: [core_ideas, key_facts, takeaways]
+      method: ruthless_fluff_removal # takeouts_GTFO
+      semantic_density: maximum
+      syntax_style: keywords_only
+      allow_full_sentences: false
+
+  - format_output:
+      use_lists: true
+      line_length: short_fast_scan
+
+  - apply_principles:
+      keep_it_simple: true
+      do_not_repeat: true
+      reader_driven: true # connect_the_dots_themselves
+      valid_yaml: true
+
+  - target_output_style:
+      format: structured_yaml
+      tone: minimal_direct
+      audience: [headline_readers, llms, adhd_brains]
+
+final_action:
+  execute: process_article_below

@@ -1,0 +1,60 @@
+knowledge_compression:
+  format: yaml
+  attributes:
+    - human_readable
+    - condensing
+    - structurally symbolic
+    - modular (atomic idea units)
+    - interoperable with systems (AI-ready)
+  status: last_human_readable_step
+  role: bridge_between_human_thought_and_machine_representation
+
+generation:
+  methods:
+    - fine_tuned_model:
+        description: model trained on structured examples of YAML outputs from human input
+        pros:
+          - scalable
+          - fast generation
+        cons:
+          - risk of losing nuance
+          - shallow compression quality
+    - reasoning_model:
+        status: likely_best
+        description: use of advanced LLM reasoning (e.g., GPT-4+) to simulate human compression via active inference
+        pros:
+          - higher fidelity
+          - more context-aware
+        cons:
+          - slower
+          - requires better prompts and scaffolding
+        evaluation_needed: true
+        evaluation_methods:
+          - compare output with expert-crafted YAMLs
+          - test decompression to original narrative
+          - assess semantic + emotional preservation
+
+evaluation:
+  goal: lossless_decompression
+  benchmark: original_state_reconstruction
+  analogy: encoder_decoder_models
+  metric: fidelity_to_original
+  methods:
+    - semantic similarity (e.g., cosine similarity between embedding vectors)
+    - emotional tone preservation (e.g., mood tagging before/after)
+    - utility test (is the idea still actionable, relevant?)
+    - human judgment (subjective reconstruction accuracy)
+
+further_compression:
+  hypothesis: maps
+  goal: compress_beyond_yaml
+  description: transform individual YAMLs into semantic graphs, then compress graphs into higher-order maps
+  structure:
+    - node: yaml_manifest
+    - edge: semantic/associative link
+    - cluster: idea module or mind region
+  use_case:
+    - simulate abstract mental movement
+    - transfer and remix conceptual space
+    - re-expand into full systems of thought
+  long_term_vision: fractal compression engine for mind modeling and creative regeneration

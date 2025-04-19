@@ -1,0 +1,43 @@
+tdd_for_rag:
+  why:
+    - no_eval_no_truth
+    - test_first_then_build
+    - feedback_loop = iterate_fast
+    - foundation_for_auto_rag
+
+  test_case:
+    - query: "user question"
+    - expected_keywords: ["fact1", "concept2"]
+    - expected_sources: ["doc1.pdf", "section_x"]
+
+  metrics:
+    faithfulness: "is answer grounded in retrieved?"
+    relevance: "does it answer the query?"
+    helpfulness: "is it useful/clear?"
+    coverage: "did it miss key facts?"
+    fluency: "is it readable?"
+    retrieval_recall: "were correct docs retrieved?"
+
+  loop:
+    - write_tests
+    - run_rag
+    - evaluate
+    - score_results
+    - tune_and_repeat
+
+  evaluation:
+    fast: keyword_match
+    smart: llm_as_judge
+    critical: faithfulness_above_all
+
+  bonus:
+    RL(HF)_ready: true
+    agents_can_tune: true
+    system_self_improves: true
+
+
+  tl;dr:
+    - tests = anchor
+    - eval = north_star
+    - build_rag_like_code
+    - test → score → ship → learn

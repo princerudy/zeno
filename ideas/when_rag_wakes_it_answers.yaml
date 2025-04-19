@@ -1,0 +1,78 @@
+query_flow:
+  name: "When RAG Wakes, It Answers"
+  description: >
+    A user query initiates a multi-layered retrieval and reasoning process across the Brain.
+    Every answer is grounded in structured YAMLs that are traceable back to the original raw documents.
+    No hallucinations — only derivations.
+
+  traceability: enforced
+  trace_method:
+    - every fact must link to:
+        - yaml_node_id
+        - source_document_id
+        - exact_section or page (if available)
+    - LLM is instructed to cite source YAML paths (or summaries with links)
+
+  steps:
+
+    - receive_query:
+        input: user_question
+        output: semantic_embedding
+        note: >
+          Query is embedded for vector search. Original form retained for tracing.
+
+    - vector_search:
+        input: semantic_embedding
+        output: candidate_yaml_ids
+        source: Embedding Layer
+        note: >
+          Retrieves relevant YAML entries semantically similar to the query.
+          These YAMLs are already linked to source documents.
+
+    - yaml_fetch:
+        input: candidate_yaml_ids
+        output: structured_chunks
+        note: >
+          Chunks include `source`, `original_document`, `section`, and `metadata`.
+
+    - link_expansion:
+        input: structured_chunks
+        output: enriched_chunks
+        note: >
+          Augments with linked nodes. All links maintain original trace info.
+
+    - concept_injection:
+        input: enriched_chunks
+        output: context_with_concepts
+        note: >
+          Conceptual YAMLs (abstracted nodes) are included **only** if they reference traceable facts.
+
+    - answer_generation:
+        input: context_with_concepts + original_query
+        output: answer_draft
+        tool: LLM
+        rules:
+          - must cite source YAML node
+          - must cite original document if used
+        prompt_suffix: >
+          "Respond with citations like: (from: ai_fundamentals.yaml, source: interview_transcript_2024.pdf)"
+
+    - postprocessing:
+        steps:
+          - trace_integrity_check
+          - remove_uncited_content
+          - format: include [source.yaml → raw.pdf → section_id] in answer
+        output: final_answer_with_sources
+
+  output:
+    - final_answer: string
+    - references:
+        - yaml_id
+        - source_document
+        - source_section
+        - citation_quality_score
+
+  philosophy:
+    - "No answer without provenance"
+    - "All knowledge is traceable to a document, not just a model"
+    - "Symbolic + vector = accountable intelligence"

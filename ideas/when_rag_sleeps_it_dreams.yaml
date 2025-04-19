@@ -1,0 +1,240 @@
+brain:
+  name: "When RAG Sleeps, It Dreams"
+  description: >
+   A conceptual architecture for layered knowledge construction and refinement, designed
+    to power Retrieval-Augmented Generation (RAG) systems. The system transforms raw,
+    unstructured documents into structured, linkable, and conceptualized YAML knowledge.
+    At its core, it treats metadata not as a byproduct, but as the product—capturing
+    representations, facts, structure, links, and embeddings.
+
+    Inspired by lakehouse and data mesh principles, it formalizes a living knowledge base
+    with multiple layers of increasing abstraction and semantic richness:
+
+    - Raw documents (PDFs, HTML, notes) form the Bronze layer.
+    - YAML representations codify structure and metadata (Silver).
+    - Refined YAMLs capture knowledge claims, facts, and assertions.
+    - Links create a semantic web across files, topics, and ideas.
+    - Concepts emerge as high-level nodes through synthesis.
+    - Embeddings vectorize YAMLs for search and agent workflows.
+
+    An always-on daemon—called the Dreaming Angel—operates across layers, mimicking sleep.
+    During system idle time, it scans, deduplicates, summarizes, re-links, and
+    synthesizes higher-level knowledge. Agents maintain structure, resolve conflicts,
+    and evolve the system autonomously.
+
+    This stack transforms documents into a navigable, evaluable, and teachable brain.
+    It merges RAG, symbolic reasoning, vector search, and automated refinement into
+    a unified epistemic engine.
+
+    graph TD
+      A[Raw Document] --> B[YAML Metadata (Representation)]
+      B --> C[YAML Knowledge (Refined, Distilled)]
+      C --> D[Embeddings (Vectorized)]
+      C --> E[Links (Semantic Connections)]
+      E --> F[Concepts (Synthesized Nodes)]
+      F --> D
+
+  layers:
+
+    documents:
+      id: 0
+      formats:
+        - pdf
+        - html
+        - markdown
+        - text
+        - json
+        - image
+        - audio
+      description: >
+        Initial, unstructured input data. PDFs, HTML, transcripts, scraped text, notes.
+        Represents foundational source material where information originates.
+      traits:
+        - messy
+        - redundant
+        - rich in signal
+      purpose: source of truth
+      format: raw files
+      lakehouse_analogy: Raw Data Lake / Landing Zone
+      example:
+        - filename: "interview_transcript_2024.pdf"
+        - content: "Q: What is AI? A: Artificial Intelligence..."
+
+    knowledge:
+      id: 1
+      formats:
+        - yaml
+      description: >
+        Structured, codified, distilled information extracted from raw sources.
+        YAML files with sections, facts, claims, semantic links, and metadata.
+      traits:
+        - semantically segmented
+        - traceable to source documents
+        - human-editable
+      purpose: durable knowledge representation
+      format: YAML
+      lakehouse_analogy: Cleaned & Structured Data / Staging Area
+      example:
+        - file: "ai_fundamentals.yaml"
+        - content:
+            fact: "AI stands for Artificial Intelligence."
+            source: "interview_transcript_2024.pdf"
+
+    semantic_links:
+      id: 2
+      formats:
+        - graph
+        - yaml
+        - json
+      description: >
+        Establishes semantic cross-references and relationships between YAML nodes.
+        Links facts, entities, sections, concepts across sources, time, abstraction.
+      built_by:
+        - LLM during background "dream" phase
+        - embedding similarity detection
+        - explicit YAML tags (`related_nodes`, `see_also`, `contradicts`)
+      outputs:
+        - graph index (for fast traversal)
+        - link metadata in YAMLs
+        - node clusters (conceptual)
+      traits:
+        - emergent
+        - redundant (multiple pathways)
+        - reflexive (self-improving links)
+      purpose: knowledge navigation, synthesis, discovery
+      lakehouse_analogy: Metadata Layer / Relationship Index
+      example:
+        - link_from: "ai_fundamentals.yaml"
+          related_nodes:
+            - "machine_learning_intro.yaml"
+            - "history_of_ai.yaml"
+
+    conceptual_understanding:
+      id: 3
+      description: >
+        Abstracted, interconnected, and synthesized understanding.
+        Concepts, categories, graphs, schemas, mental models built from prior layers.
+      traits:
+        - deduplicated
+        - conceptual
+        - clusterable
+        - evaluable
+      purpose: foundation for reasoning & teaching
+      format: concept YAMLs, JSON schemas, markdown graphs, ontologies
+      lakehouse_analogy: Business Semantic Layer / Data Marts
+      example:
+        - file: "types_of_bias.yaml"
+        - content:
+            concept: "Confirmation Bias"
+            description: "Tendency to favor information confirming existing beliefs."
+            sources:
+              - "bias_in_decision_making.yaml"
+              - "cognitive_biases.yaml"
+
+    embeddings:
+      id: 4
+      description: >
+        Numerical vector representations of structured knowledge and concepts.
+        Optimized for semantic search, agent use, and hybrid retrieval.
+      traits:
+        - fast retrieval
+        - fuzzily linked
+        - model-specific
+      purpose: similarity search, hybrid RAG, agent input
+      format: vector DB + metadata
+      lakehouse_analogy: Vector Indexes / Query Acceleration Layer
+      example:
+        - source: "ai_fundamentals.yaml"
+        - embedding_vector: [0.12, -0.45, 0.88, ...]
+
+    symbolic_agents:
+      id: 5
+      description: >
+        Symbolic agents that operate on structured knowledge.
+        Codifiers, evaluators, explainers, and other specialized agents.
+        They can read, write, and reason over YAMLs.
+        Autonomous agents and daemons that continuously operate across layers.
+        RAG workers, codifiers, explainers. Maintain integrity and evolve the system.
+      goal: continuous refinement, query answering, insight generation
+      lakehouse_analogy: Streaming Computation / Automated Optimizers
+      example:
+        - agent_name: "summarizer_daemon"
+        - function: "generate `summary` key for every YAML node"
+
+  dreaming_angel:
+
+    description: >
+      When RAG sleeps, it dreams.
+      This background process continuously refines, links, and synthesizes knowledge.
+      It builds structure, creates semantic links, and evolves YAMLs into a cohesive knowledge graph.
+
+    modules:
+      - input_scan:
+          purpose: discover new documents, detect structure gaps, find overlapping nodes
+          sources: [yaml_docs, raw_docs, embeddings, logs]
+
+      - semantic_duplication:
+          purpose: intentionally duplicate knowledge using alternative framings and annotations
+          methods:
+            - multiple angles and chunking strategies
+            - memory-style overlaps
+            - annotated entry points
+          benefit: robust retrieval, faster access paths
+
+      - re_linking:
+          purpose: establish semantic links between knowledge nodes
+          strategies:
+            - topic similarity
+            - shared concepts
+            - vector similarity
+            - co-occurrence in answers
+          formats:
+            - YAML keys (`related_nodes`)
+            - backlink logs for graphs
+
+      - summarization:
+          granularity: [node, document, cluster]
+          output:
+            - inline summaries in YAMLs
+            - markdown notes
+            - prompt sets for eval
+
+      - synthesis:
+          purpose: generate higher-order concepts from patterns in structured knowledge
+          example: types_of_bias.yaml synthesized from bias-related YAMLs
+
+      - contradiction_check:
+          purpose: detect and flag conflicting entries
+          outputs:
+            - `conflicts_with` key in YAML
+            - diff logs and summaries
+
+      - versioning_and_audit:
+          purpose: ensure change traceability and auditability
+          features:
+            - logs with timestamp, agent_id, change_type
+            - raw + refined YAML coexistence
+            - full version lineage
+
+    trigger_modes:
+      - scheduled (e.g., nightly)
+      - idle_based
+      - event_driven (e.g., post-upload)
+      - manual ("deep_integrate")
+
+    outputs:
+      - refined, interlinked YAMLs
+      - auto-generated summaries and conceptual nodes
+      - evolving YAML-native knowledge graph
+      - optimized corpus for RAG, agents, discovery
+
+    tags:
+      - dreaming
+      - background_processing
+      - knowledge_refinement
+      - semantic_linking
+      - knowledge_synthesis
+      - automated_curation
+      - knowledge_graph_evolution
+      - RAG_optimization
+      - information_architecture

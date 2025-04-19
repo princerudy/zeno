@@ -1,0 +1,50 @@
+zettel_cluster: tree_of_thought_representation
+created: 2025-04-18
+zettels:
+
+  - id: tree_vs_graph
+    title: Tree of Thought vs Graph of Self
+    text: >
+      Zettels don't need to be separate files — keeping multiple zettels in the same file naturally forms a semantic cluster.
+      The directory structure itself becomes a form of meaning, like a topological map of thought.
+      Instead of relying on nodes and edges, the file system becomes a "tree of thought" — a living, navigable mind-map.
+    tags: [zettel_structure, file_system, epistemic_topology, thought_tree]
+    anchor: tree_of_thought_vs_graph_of_self
+
+  - id: semantic_proximity
+    title: Semantic Proximity through Structure
+    text: >
+      A file’s contents and its directory path express semantic proximity.
+      Zettels that live in the same file or folder share meaning not by explicit links but by context.
+      This reduces the need for manual edge definitions while enhancing interpretability.
+    tags: [structure, proximity, context, semantic_order]
+    anchor: semantic_proximity_via_path
+
+  - id: zeno_fs_as_mind
+    title: Zeno File System as a Semantic Mind
+    text: >
+      The Zeno file system is not just a container — it's a living representation of a mind.
+      Each folder is a conceptual realm. Each file is a semantic loop. Each zettel is a pulse.
+      Changing the folder structure is like reshaping memory or perspective.
+    tags: [zeno, semantic_fs, mind_representation, directory_model]
+    anchor: fs_as_mindspace
+
+  - id: multiple_fs_views
+    title: Multiple Filesystems as Multiple Selves
+    text: >
+      Alternative file structures can represent different selves, moods, or epistemic states.
+      Zeno could generate variant directory trees from the same zettel base, enabling persona simulation, evolution timelines, or taste variations.
+    tags: [selves, file_structure_variants, zeno_simulation, mood_graph]
+    anchor: multi_fs_persona_views
+
+  - id: tree_of_thought_power
+    title: Why Tree of Thought Wins
+    text: >
+      Compared to traditional graphs, tree-of-thought structures offer:
+      - Human legibility
+      - Git-native versioning
+      - Proximity-as-meaning
+      - Emergent hierarchy
+      The filesystem becomes the cognition substrate.
+    tags: [tree_of_thought, cognitive_structure, comparison, file_vs_graph]
+    anchor: why_tree_of_thought

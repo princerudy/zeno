@@ -1,0 +1,23 @@
+mindgames_pitch:
+  human_need:
+    core_desires:
+      - know_others
+      - be_known_understood
+      - understand_self
+  product_introduction:
+    name: mindgames
+    description: game_engine
+    purpose: create_latent_representation_of_user_mind
+  application:
+    outcome: fine_tuned_ai_version_of_user
+  ai_capabilities:
+    - companionship
+    - task_execution # "Do shit for you"
+    - social_life_outsourcing
+    - partner_finding # "for whatever purpose"
+    - personalized_meme_curation
+    - diverse_other_functions # "many many more"
+  value_proposition:
+    ultimate_claim: renders_other_people_unnecessary # "You will never need people in your life anymore!"
+  call_to_action:
+    invite: try_mindgames_today

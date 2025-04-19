@@ -1,0 +1,101 @@
+mindgames_system:
+  concept:
+    description: >
+      A user-driven system for training personalized models through fast, intuitive tagging games.
+      Combines elements of RLHF, preference learning, and graph-based meaning mapping.
+    philosophy:
+      - Training is data, not the model.
+      - User input is sacred — no meaningful personalization without it.
+      - Tagging is costly for the user — every interaction must be high-value.
+      - Gradual model takeover: system predicts → user corrects → model improves.
+
+mindgraph_needs:
+  - multiple_feedback_loops:
+      - binary
+      - pairwise
+      - quintuplet
+      - graph
+  - gamified_feedback:
+      - highlighted_predictions
+      - accuracy_display
+      - xp_system
+      - avatar_growth
+  - personalization:
+      - user-level models
+      - visible learning
+  - real_time_model_feedback: true
+  - exploratory_graph_ui: true
+  - tight_model_loop_integration: true
+  - fast_flows:
+      - keyboard
+      - swipe
+      - drag
+  - feedback:
+      - haptic
+      - visual
+      - auditory: [clicks, clacks, tones]
+      - dopamine: "spotify wrapped"-style highlights
+  - social_layer:
+      - shareable_user_profile: true
+      - visualized_taste_graph: true
+      - remixable_by_others: optional
+      - compact_identity_card: true
+      - game_mode_guess_my_choice: true
+      - virality_drivers:
+          - viral_loop: "People want to see their taste mapped — but they love seeing someone else’s and comparing."
+          - meme_appeal: "Here’s my MindGraph — what’s yours?"
+          - taste_flex: "Look how weird/pure/cultured my profile is"
+          - social_alignment: "Ahhh so that’s why we vibe"
+          - dating_use_case: true
+
+profile_capabilities:
+  - answers_questions:
+      - "What music do I like?"
+      - "What food do I like (and would prefer)?"
+      - "What’s the probability I will like [item/song/idea]?"
+      - "What’s my aesthetic taste in X?"
+      - "Top 10 philosophers I resonate with"
+      - "What are my top 5 contradictions?"
+      - "What’s my vibe in 3 words?"
+      - "Which AI model is most similar to me?"
+  - predictive_engine:
+      - can_guess_user_preferences_on_new_items
+      - can compare two users for compatibility
+      - can simulate how user would respond to unknown stimuli
+  - profile_format:
+      - export_as: [public_link, json_manifest, graph_embed, qr_code]
+      - modes: [public, private, temporary_share]
+
+
+  core_loops:
+    - type: binary_tagging
+      ui: swipe_or_click
+      interaction: yes/no or skip
+      purpose: fast labeling of many entities
+    - type: preference_comparison
+      ui: this_or_that
+      interaction: system predicts, highlights preferred option
+      feedback: user confirms or rejects
+      model: updates preference vector, displays evolving accuracy
+    - type: connection_mapping
+      ui: graph_drag_or_suggest
+      interaction: user links nodes, confirms suggested links
+      outcome: builds personalized knowledge graph
+    - type: ranking
+      ui: drag_and_drop_list
+      interaction: rank items or assign ordinal values
+    - type: quintuplet_comparison
+      ui: pick_best_of_five
+      purpose: semantic clustering and higher-order preference modeling
+
+  gamification:
+    - system_accuracy_display: true
+    - feedback_on_model_guess: highlighted_prediction
+    - xp_or_progress_indicators: optional
+    - optional_reflection_prompts: "Why did you choose this?"
+
+  future_expansions:
+    - taste_visualization: radar_chart | semantic_map | evolving profile
+    - negative_tagging: "never show me this again"
+    - context_tags: mood-based or situation-based tagging
+    - seed_graph_import: optionally prelink nodes for faster cold start
