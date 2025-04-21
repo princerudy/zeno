@@ -4,10 +4,10 @@ import yaml
 import random
 from datetime import datetime
 
-# Paths
-zettels_dir = "zettels/"
-graph_path = "components/graph.yaml"
-pulls_dir = "pull_requests/"
+# Updated paths for new project structure
+zettels_dir = os.path.join(os.path.dirname(__file__), '../data/zettels')
+graph_path = os.path.join(os.path.dirname(__file__), 'components/graph.yaml')
+pulls_dir = os.path.join(os.path.dirname(__file__), '../logs/pull_requests')
 
 
 # 1. Load all zettels

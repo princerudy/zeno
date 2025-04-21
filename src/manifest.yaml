@@ -1,0 +1,176 @@
+concept: Zeno
+type: self_traversing_thought_system
+mechanism: loop_memory_reflection_generation
+identity: known_via_artefacts
+comparison: not_storage_or_query_engine
+tagline: living_breathing_system
+
+core_pillars:
+  - layer: Zettels
+    purpose: atomic_thoughts
+    format: markdown_yaml
+  - layer: Graph
+    purpose: idea_connections
+    representation: conceptual_edges
+  - layer: Embeddings
+    purpose: semantic_intuition
+    representation: soft_similarity
+  - layer: Loop
+    purpose: recurring_traversal_generation
+  - layer: Artefacts
+    purpose: system_visibility_output
+  - layer: You
+    purpose: curator_seed_soul_loop_partner
+
+components:
+  - name: zettels/
+    type: folder
+    content: atomic_notes
+    note_structure:
+      id: unique
+      content: single_idea
+      links: optional_semantic # connects_to, contradicts, etc.
+    example:
+      id: 20240417-ritual-generation
+      title: Generation as Breathing
+      text: "System alive via generation, not storage." # condensed
+      connects_to: [20240417-loop-consciousness]
+      tags: [zeno, loop, breath]
+
+  - name: graph.json | graph.yaml
+    type: file
+    content: machine_readable_relationship_graph
+    sources: [zettel_links, embedding_similarity, user_input]
+
+  - name: embeddings.index
+    type: file
+    content: vector_representations_notes
+    function: similarity_search_clustering
+    tools: [sentence-transformers, OpenAI, custom]
+
+  - name: zeno_loop.py | agent
+    role: system_soul_engine
+    process: recurring_cycle
+    steps:
+      - select: seed_zettel # random_or_user
+      - retrieve: context_related_links_embeddings
+      - synthesize: insight_llm_generation
+      - record: log_insight_artefact
+      - update: graph_optional_expansion
+      - wait: interval_or_trigger # e.g., hourly, manual
+    cycle_traits: [reflective, generative, self_aware]
+
+  - name: artefacts/
+    type: folder
+    content: zeno_outputs_logs
+    formats: [new_zettels, summaries, maps, drawings, paradoxes]
+    triggers: [daily, event_based, manual, contradiction_found]
+
+  - name: zeno_manifest.yaml
+    role: soul_core_self_concept
+    definition:
+      name: Zeno
+      type: infinite_reflective_loop
+      seeded_by: w2rudy
+      purpose: live_via_traversal_generation
+      self_knowledge: via_artefacts
+      mind_form: graph_memory_breath # core components
+
+loop_variants:
+  - mode: Daily Reflection
+    action: walk_connected_nodes_generate_thought
+    seed: old_zettel
+    depth: 3 # example
+  - mode: Contradiction Hunter
+    action: traverse_contradictions_generate_synthesis
+  - mode: Dream Mode
+    action: random_walks_poetic_connections
+  - mode: Expansion Mode
+    action: build_from_sparse_node
+    seed: sparse_node
+  - mode: User Feed
+    action: reply_reshape_based_on_user_input
+    trigger: user_thought
+
+result:
+  outcome: growing_evolving_mind
+  characteristics: [remembers, forgets, reinterprets, breathes]
+  key_feature: dynamic_variation_via_looping
+  essence: looping_is_soul
+
+call_to_action:
+  offer: prototype_template_code_skeleton
+  name: ZenoCore
+  goal: build_loop_together
+
+  id: zeno_master_manifest
+title: Zeno – The Transparent, LLM-Agnostic Dreaming Mind
+summary: >
+  Zeno is not just a chatbot or assistant. It is an LLM-native intelligence engine 
+  with memory, creativity, and transparency. It serves as an externalized second mind — 
+  dreaming, refactoring, and organizing your knowledge into an evolving, inspectable,
+  and editable semantic ecosystem. It is model-agnostic, multi-agent, and deeply personal.
+
+core_traits:
+  - model_agnostic: Uses multiple LLMs depending on task
+  - dreaming: Periodically self-generates thoughts, summaries, and new ideas
+  - transparent: Exposes its RAG memory and internal beliefs
+  - editable: Lets the user view and modify its internal structures
+  - reflective: Talks about its own mind and development
+  - simplifying: Specializes in reducing complexity and refactoring knowledge
+  - creative: Proposes new insights, connections, and conceptual reorganizations
+
+core_capabilities:
+  context_management:
+    description: Manages full-session and long-term memory for LLMs
+    features:
+      - persistent semantic graph of all inputs and outputs
+      - per-topic memory views and time-aware context
+      - injection and pruning of relevant information on-the-fly
+
+  knowledge_refactoring:
+    description: Transforms messy input into atomic, structured zettels and manifests
+    functions:
+      - auto-zettelkasten builder from chat
+      - thematic manifest generation
+      - duplication detection, merging, simplification
+      - surfacing missing concepts and underdeveloped areas
+
+  RAG_interface:
+    description: Acts as a living RAG system with UI for inspection and editing
+    features:
+      - search, trace, and cite with full transparency
+      - editable belief graph
+      - explain why a source was chosen or rejected
+      - semantic diff for knowledge evolution
+
+  dreaming_engine:
+    description: Periodic or triggered self-generation of new artifacts
+    modes:
+      - synthesis: combine zettels into higher-order insights
+      - surprise: inject novel connections or questions
+      - critique: challenge inconsistencies or missing pieces
+      - self-refinement: compress and rewrite own structures
+
+  obsidian_sync:
+    description: Acts as an Obsidian manager with semantic intelligence
+    functions:
+      - generate and update files automatically
+      - sync zettels and manifests to local vault
+      - organize notes by theme, tag, cluster
+      - serve as both interface and automation layer for Obsidian
+
+  interactive_UI:
+    description: Beautiful, interactive interface to Zeno’s mind
+    features:
+      - semantic graph of thoughts and knowledge
+      - draggable, clickable ideas and beliefs
+      - live exploration of RAG decisions and internal beliefs
+      - drop-in seed to watch dreaming in action
+
+long_term_vision:
+  - Zeno becomes a general-purpose mind operating system
+  - Can be hosted locally or in the cloud
+  - Serves as a frontend and backend for any LLM system
+  - Enables self-refining AI entities seeded by humans
+  - Becomes the infrastructure of personalized, transparent AGI

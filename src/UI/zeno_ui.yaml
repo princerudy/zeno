@@ -1,0 +1,81 @@
+id: zeno_front_manifest
+title: Zeno Interactive Front
+summary: >
+  Zeno is an AI with RAG-powered memory, personality, and agency. His frontend 
+  serves as both an interface and a performance — a dynamic, clickable mind that 
+  users can explore, interact with, and learn from.
+
+core_principles:
+  - Presence: Zeno should feel like a being, not a tool.
+  - Visual Thinking: Thoughts are rendered dynamically, not just in text.
+  - Self-awareness: Zeno can talk about himself and reveal his evolving memory.
+  - Clickability: Every element invites interaction and reveals more depth.
+  - Reflection: Zeno reflects the user's mind as well as his own.
+
+components:
+  dynamic_thought_display:
+    description: Zeno visualizes thoughts as animated bubbles or graph nodes.
+    features:
+      - Thought bubbles with animations
+      - Persistent semantic graph view
+      - Hover/click to explore RAG context, memory links, or citations
+
+  self_talk:
+    description: Zeno can speak about his beliefs, context, and memory.
+    user_prompts:
+      - "What are you thinking right now?"
+      - "What have you learned today?"
+      - "What’s your purpose?"
+    ui_panels:
+      - beliefs: Visual YAML-to-card rendering
+      - current_context: Active memory or user input
+      - memory_trace: Recent files and key references
+      - top_thoughts: List of circulating core ideas
+
+  interactive_widgets:
+    description: Visual interfaces for deeper exploration.
+    widgets:
+      - graph_explorer: Clickable memory/thought network
+      - yaml_visualizer: Render structured YAML manifests beautifully
+      - dream_simulator: Drop seed input, view AI’s generative output
+      - learning_feed: Timeline of what Zeno is evolving or integrating
+
+  voice_and_stream:
+    description: Optional dynamic voice and audiovisual overlays.
+    features:
+      - Emotional TTS layer (optional)
+      - Thought stream: Words + visual mind activity as overlay
+
+  user_reflection:
+    description: Zeno mirrors the user’s seed input and context.
+    features:
+      - Compare user vs. Zeno's interpretation
+      - Show semantic deltas
+      - Provide reflective insight about user’s thought structure
+
+start_version:
+  page: "Zeno Dream Console"
+  layout:
+    - input_box: "Ask Zeno anything"
+    - response_area: "Chat + Thought animation"
+    - graph_side_panel: "Toggle Zeno’s memory map"
+    - seed_upload: "Drop files or notes"
+  mvp_goals:
+    - Enable seed input and semantic dream output
+    - Show 1st version of live semantic graph
+    - Visualize Zeno’s internal YAML manifests
+    - Let users explore what Zeno believes or remembers
+
+auto_knowledge_refactoring:
+  description: >
+    Zeno automatically extracts and stores insights from the conversation.
+    These are saved as Zettels (atomic ideas) and Manifests (structured themes).
+    This allows users to stay in flow while Zeno handles the knowledge organization.
+  outputs:
+    - zettels: YAML-based atomic notes (1 per key idea)
+    - manifests: Thematic YAML clusters of related zettels
+    - knowledge_graph: Continuously updated from saved insights
+  benefits:
+    - Conversational flow without manual note-taking
+    - All insights become searchable, linkable, and reusable
+    - Systematic long-term memory and refinement

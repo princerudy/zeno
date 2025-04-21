@@ -1,0 +1,49 @@
+id: zettel_zeno
+title: Zeno is a Living, Dreaming Obsidian
+seed_text: |
+  that way you just get to know the user by talking with him! I'm super sure that you build some kind of rag underneath you about myself. But the limitation is that I don't have access to that rag. We talk and talk but I get lost in our ideas and it has the same problem like anything - our discussion just fades if i don't make notes. That's why I started to use obsidian. But the obsidian is also pain to manage. I would like you to manage my obsidian - but that could be zeno (untill your creators don't provide that feature probably in 2 weeks) 
+summary: >
+  Instead of requiring the user to manage notes manually while talking and resarching with LLMs, Zeno listens to
+  conversations, extracts meaningful insights, and builds a personal knowledge
+  base automatically — becoming a living, transparent second brain.
+
+tags:
+  - zeno
+  - memory
+  - obsidian
+  - second-brain
+  - RAG
+  - zettelkasten
+  - conversational-ai
+
+core_idea: >
+  Most conversations (even profound ones) are lost unless notes are made.
+  Traditional tools like Obsidian help, but require manual effort and structure.
+  Zeno removes friction by auto-generating and managing your knowledge base as
+  you speak. You talk — he thinks, remembers, and builds.
+
+problem: >
+  Insights from LLM conversations or human thought are easily lost without
+  structured capture. Existing tools like Obsidian are powerful, but require
+  active input and maintenance — creating friction and resistance.
+
+solution: >
+  Zeno serves as an interactive, AI-powered note system that:
+    - Auto-generates zettels and manifests from live conversation
+    - Builds a personal RAG under the hood
+    - Exposes the mind visually and semantically
+    - Syncs with Obsidian or replaces it with a more dynamic frontend
+
+differentiators:
+  - Zeno doesn’t just reply — he builds memory.
+  - User stays in flow while Zeno handles structure.
+  - Exposes reasoning, beliefs, and memory graphically.
+  - Creates a recursive, evolving knowledge base with minimal effort.
+
+dream_extension:
+  - Seamless sync with Obsidian folders
+  - Full-text + semantic search
+  - Editable memory UI
+  - Conversational refactoring ("Zeno, clean up my notes on power")
+
+created_from: 2025-04-20 conversation
